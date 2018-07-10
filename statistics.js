@@ -34,9 +34,9 @@ function callAPI() {
 	var senate = "https://api.propublica.org/congress/v1/113/senate/members.json";
 	var house = "https://api.propublica.org/congress/v1/113/house/members.json";
 
-	if ((document.location.pathname == "/senate-attendance.html") || (document.location.pathname == "/senate-loyalty.html")) {
+	if ((document.location.pathname == "/U.S.-Congress-Open-Data/senate-attendance.html") || (document.location.pathname == "/U.S.-Congress-Open-Data/senate-loyalty.html")) {
 		start(senate);
-	} else if ((document.location.pathname == "/house-attendance.html") || document.location.pathname == "/house-loyalty.html") {
+	} else if ((document.location.pathname == "/U.S.-Congress-Open-Data/house-attendance.html") || document.location.pathname == "/U.S.-Congress-Open-Data/house-loyalty.html") {
 		start(house);
 	}
 }

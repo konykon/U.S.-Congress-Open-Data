@@ -30,9 +30,9 @@ function call() {
 	var senate = "https://api.propublica.org/congress/v1/113/senate/members.json";
 	var house = "https://api.propublica.org/congress/v1/113/house/members.json";
 
-	if (document.location.pathname == "/senate.html") {
+	if (document.location.pathname == "/U.S.-Congress-Open-Data/senate.html") {
 		start(senate);
-	} else if (document.location.pathname == "/house.html") {
+	} else if (document.location.pathname == "/U.S.-Congress-Open-Data/house.html") {
 		start(house);
 	}
 }
