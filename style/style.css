@@ -1,0 +1,135 @@
+body {
+	font-size: 16px;
+}
+
+.mail {
+	font-size: 18px;
+	padding-right: 10px;
+}
+
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+
+.paragraph {
+	padding-right: 350px;
+	padding-bottom: 20px;
+}
+
+.img {
+	padding-top: 50px;
+	width: 260px;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
+table, th, h3 {
+	text-align: center;
+}
+
+.functiona th,
+.functiona td
+{
+	width: 200px;
+}
+
+#name {
+	width: 350px;
+}
+
+#thead {
+	display: table;
+	width: auto;
+}
+
+#senate-data {
+	max-height: 70vh;
+	overflow-y: auto;
+	display: block;
+}
+
+.padding {
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 20px;
+}
+
+footer {
+	height: 50px;
+	border-radius: 5px;
+	background-color: #222;;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: right;
+	padding-top: 12px;
+}
+
+.text-center {
+	font-size: 18px;
+	color: #9d9d9d;
+	}
+
+.top {
+	color: #9d9d9d;
+	padding-right: 10px;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 94%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+	

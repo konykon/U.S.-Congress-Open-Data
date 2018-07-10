@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/style.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<img src="images/opengov.png" alt="opengov" class="img-responsive">
+	</header>
+
+	<div class="container">
+
+		<nav class="navbar navbar-inverse">
+			<div>
+				<div>
+					<a class="navbar-brand" href="#">TGIF</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="active">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="senate.html">Senate</a></li>
+							<li><a href="house.html">House</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="senate-attendance.html">Senate</a></li>
+							<li><a href="house-attendance.html">House</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="senate-loyalty.html">Senate</a></li>
+							<li><a href="house-loyalty.html">House</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="mail"><a href="mailto:info@tgif.net" target="_blank" class="glyphicon glyphicon-envelope"> info@tgif.net</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!--Table container-->
+		<div class="paragraph">
+			<h2>Senators</h2>
+			<p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+		</div>
+
+		<div id="app">
+
+			<div style="margin:0;">
+				<div id="loader"></div>
+				<div style="display:none;" id="myDiv" class="animate-bottom">
+
+
+					<div class="row">
+						<div class="col-sm-10 left">
+							<label>Filter by Party:</label>
+							<input type="checkbox" name="party" value="D" id="demo">Democrat
+							<input type="checkbox" name="party" value="R" id="rep">Republican
+							<input type="checkbox" name="party" value="I" id="ind">Independant
+						</div>
+
+						<div class="col-sm-2 right">
+							<label>Filter by State:</label>
+							<select id="state">
+							<option value="all">All</option>
+							<option v-for="state in states">{{ state }}</option>
+						</select>
+						</div>
+					</div>
+
+					<div id="content">
+						<table class="table table-hover functiona">
+							<thead id=thead>
+								<tr>
+									<th id="name">Name</th>
+									<th>Party</th>
+									<th>State</th>
+									<th>Years in Office</th>
+									<th>% Votes w/Party</th>
+								</tr>
+							</thead>
+
+							<tbody id="senate-data">
+								<tr v-for="member in members">
+									<td id="name"><a v-bind:href="member.url" target="_blank">{{ member.first_name }} {{ member.middle_name }} {{ member.last_name}}</a></td>
+									<td>{{ member.party }}</td>
+									<td>{{ member.state }}</td>
+									<td>{{ member.seniority }}</td>
+									<td>{{ member.votes_with_party_pct }}</td>
+								</tr>
+							</tbody>
+
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="row">
+			<div class="col-sm-10">
+				<p class="text-center">&#169; 2016 TGIF | All Rights Reserved</p>
+			</div>
+			<div class="col-sm-2">
+				<p><a href="senate.html" class="top">Back to top</a></p>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<script src="script.js"></script>
+	</div>
+</body>
+
+</html>
